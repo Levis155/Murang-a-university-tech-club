@@ -81,6 +81,7 @@
       height: 50%;
       position: relative;
       width: 100%;
+      overflow: hidden;
     }
   }
 .hero-right img{

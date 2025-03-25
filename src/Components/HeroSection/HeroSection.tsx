@@ -1,5 +1,6 @@
 import "./HeroSection.css";
 import { Link } from "react-router-dom";
+import heroImg from "../../assets/hero-image.jpg"
 
 function HeroSection() {
   return (
@@ -30,7 +31,7 @@ function HeroLeft() {
 function HeroRight() {
   return (
     <div className="hero-right">
-      <img src="src\assets\hero-img.jpg" alt="" />
+      <img src={heroImg} alt="" />
     </div>
   );
 }

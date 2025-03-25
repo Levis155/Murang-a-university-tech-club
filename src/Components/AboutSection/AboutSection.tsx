@@ -2,6 +2,7 @@ import aboutData from "../../Data/aboutData";
 import "./AboutSection.css";
 import Title from "../Title/Title";
 import { Link } from "react-router-dom";
+import aboutImg from "../../assets/about-image.jpg"
 
 interface AboutCardProps {
   aboutCardTitle: string;
@@ -50,7 +51,7 @@ function AboutRight() {
   return (
     <div className="about-right">
       <div className="about-image-cont">
-        <img src="src\assets\about-img.jpg" alt="" />
+        <img src={aboutImg} alt="" />
       </div>
     </div>
   );
