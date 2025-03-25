@@ -1,0 +1,38 @@
+.title-right-cont{
+    margin-bottom: 4rem;
+    text-align: end;
+}
+.sub-title-right{
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--purple-color);
+}
+@media screen and (max-width: 25em) {
+    .sub-title-right {
+      font-size: 1.4rem;
+    }
+  }
+
+.main-title-right-cont{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.main-title-right{
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+@media screen and (max-width: 28.125em) {
+    .main-title-right {
+      font-size: 3rem;
+    }
+  }
+.main-title-right-cont hr {
+    width: 40%;
+    border: none;
+    height: 1.5px;
+    background-color: var(--purple-color);
+    margin: 0 5px 0.5rem 5px;
+}
