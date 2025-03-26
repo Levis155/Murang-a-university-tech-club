@@ -5,14 +5,10 @@
 }
 @media screen and (max-width: 68.125em) {
     .about-section {
-      padding: 4rem;
-    }
-  }
-@media screen and (max-width: 68.125em) {
-    .about-section {
       flex-direction: column;
-      gap: 2rem;
+      gap: 4rem;
       align-items: center;
+      padding: 4rem;
     }
   }
 .about-left{
@@ -51,6 +47,11 @@
     padding: 1.5rem 2rem;
     border-radius: 3rem;
     display: inline;
+}
+@media screen and (max-width: 68.125em) {
+  .about-link-cont a{
+    margin-top: 0rem;
+  }
 }
 
 .about-right{
