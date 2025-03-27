@@ -5,14 +5,13 @@ import { FaLocationDot } from "react-icons/fa6";
 import eventsData from "../../Data/eventsData";
 
 interface EventCardProps {
+  cardId:number;
   eventDay: string;
   eventExcerpt: string;
   eventTime: string;
   eventTitle: string;
   eventVenue: string;
   eventLead: string;
-  dayStyle: string;
-  eventTitleStyle: string;
 }
 
 function EventsSection() {
@@ -26,14 +25,13 @@ function EventsSection() {
         {eventsData.map((data) => (
           <EventCard
             key={data.eventTitle}
+            cardId={data.id}
             eventDay={data.eventDay}
             eventTitle={data.eventTitle}
             eventExcerpt={data.eventExcerpt}
             eventTime={data.eventTime}
             eventVenue={data.eventVenue}
             eventLead={data.eventLead}
-            dayStyle={data.dayStyle}
-            eventTitleStyle={data.eventTitleStyle}
           />
         ))}
       </div>
@@ -42,23 +40,22 @@ function EventsSection() {
 }
 
 function EventCard({
+  cardId,
   eventDay,
   eventExcerpt,
   eventTime,
   eventTitle,
   eventVenue,
   eventLead,
-  dayStyle,
-  eventTitleStyle,
 }: EventCardProps) {
   return (
     <div className="events-card">
-      <div className={dayStyle}>
+      <div className={cardId % 2 !== 0 ? "day" : "day-alt-bg"}>
         <p>{eventDay}</p>
       </div>
 
       <div className="event-details">
-        <p className={eventTitleStyle}>{eventTitle}</p>
+        <p className={cardId % 2 !== 0 ? "event-title" : "event-title-alt"}>{eventTitle}</p>
 
         <p className="event-excerpt">{eventExcerpt}</p>
 

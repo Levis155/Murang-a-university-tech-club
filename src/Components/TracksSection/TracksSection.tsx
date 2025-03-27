@@ -6,10 +6,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import tracksData from "../../Data/tracksData";
 
 interface TracksCardProps {
+  cardId:number;
   trackTitle: string;
   trackExcerpt: string;
   trackImg: string;
-  className: string;
 }
 
 interface InputProps {
@@ -32,10 +32,10 @@ function TracksSection() {
           {tracksData.map((data) => (
             <TrackCard
               key={data.trackTitle}
+              cardId={data.id}
               trackTitle={data.trackTitle}
               trackExcerpt={data.trackExcerpt}
               trackImg={data.trackImage}
-              className={data.className}
             />
           ))}
         </div>
@@ -91,13 +91,13 @@ function TracksSection() {
 }
 
 function TrackCard({
+  cardId,
   trackTitle,
   trackExcerpt,
   trackImg,
-  className,
 }: TracksCardProps) {
   return (
-    <div className={className}>
+    <div className={cardId % 2 !== 0 ? "track-card" : "track-card-reverse"}>
       <div className="track-card-details">
         <p className="track-card-title">{trackTitle}</p>
         <p className="track-card-excerpt">{trackExcerpt}</p>
